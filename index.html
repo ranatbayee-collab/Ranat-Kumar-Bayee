@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ranat Kumar Bayee | Full-Stack Developer &amp; AI Engineer</title>
+
+  <meta name="description"
+    content="Portfolio of Ranat Kumar Bayee, a Full-Stack Developer and AI Engineer from Bhubaneswar, India. Featuring 3D interactive hero, glassmorphism design, projects, skills and resume.">
+  <meta name="keywords"
+    content="Ranat Kumar Bayee, Full Stack Developer, AI Engineer, 3D Portfolio, Glassmorphism, Three.js, React, Python, Bhubaneswar">
+  <meta name="author" content="Ranat Kumar Bayee">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ranat Kumar Bayee | 3D Full-Stack Developer & AI Engineer">
+  <meta property="og:description"
+    content="Explore my 3D glassmorphic portfolio, innovative AI projects, and development journey.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ========================================================================
+       3D IMMERSIVE PRELOADER
+       ======================================================================== -->
+  <div id="app-preloader" class="app-preloader" role="status" aria-live="polite"
+    aria-label="Loading portfolio experience">
+    <div class="preloader-backdrop" aria-hidden="true">
+      <div class="preloader-glow-orb"></div>
+      <div class="preloader-grid"></div>
+    </div>
+
+    <div class="preloader-content">
+      <!-- 3D Gyroscope & Holographic Core Scene -->
+      <div class="loader-3d-scene" aria-hidden="true">
+        <div class="loader-3d-pivot" id="loader-pivot">
+          <!-- 3D Gyroscope Rings -->
+          <div class="gyro-ring ring-outer">
+            <span class="gyro-node node-1"></span>
+            <span class="gyro-node node-2"></span>
+          </div>
+          <div class="gyro-ring ring-middle">
+            <span class="gyro-node node-3"></span>
+            <span class="gyro-node node-4"></span>
+          </div>
+          <div class="gyro-ring ring-inner">
+            <span class="gyro-node node-5"></span>
+          </div>
+
+          <!-- 3D Holographic Polyhedral Glass Cube -->
+          <div class="loader-core-cube">
+            <div class="cube-face face-front"></div>
+            <div class="cube-face face-back"></div>
+            <div class="cube-face face-left"></div>
+            <div class="cube-face face-right"></div>
+            <div class="cube-face face-top"></div>
+            <div class="cube-face face-bottom"></div>
+          </div>
+
+          <!-- Quantum Energy Singularity -->
+          <div class="core-quantum-spark"></div>
+        </div>
+      </div>
+
+      <!-- Preloader Brand & Progress Indicator -->
+      <div class="preloader-brand">
+        <div class="preloader-monogram">RB</div>
+        <div class="preloader-name">Ranat Kumar Bayee</div>
+        <div class="preloader-role">Full-Stack Developer &amp; AI Engineer</div>
+      </div>
+
+      <!-- Progress Bar & Status -->
+      <div class="preloader-progress-wrap">
+        <div class="preloader-bar">
+          <div class="preloader-bar-fill" id="preloader-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span class="preloader-status" id="preloader-status">Initializing 3D runtime...</span>
+          <span class="preloader-percent" id="preloader-percent">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/loader.js"></script>
+
+  <!-- Ambient Luminous Mesh Glows -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Cyber Matrix Overlay Grid -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Magnetic Cursor Elements -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-circle" aria-hidden="true"></div>
+
+  <!-- Floating Glass Navigation Bar -->
+  <header class="nav-header">
+    <nav class="container nav-container" aria-label="Main Navigation">
+      <a href="#home" class="nav-brand">
+        <img src="assets/logo.png" alt="Sourava Kumar Swain" class="brand-avatar">
+        <span>Sourava Kumar Swain</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Switch Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle Navigation Menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION WITH 3D WEBGL INTERACTION & GLASSMORPHISM
+       ======================================================================== -->
+  <section id="home" class="hero-section">
+    <!-- WebGL Three.js 3D Background Canvas -->
+    <canvas id="hero-3d-canvas"></canvas>
+
+    <div class="container hero-grid">
+      <!-- Left Hero Column (Glass Content) -->
+      <div class="hero-content" data-reveal="fade-right">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Ranat Kumar Bayee</h1>
+
+        <!-- Glass Terminal Prompt with Dynamic Typewriter -->
+        <div class="hero-terminal">
+          <span class="terminal-prompt">&gt;</span>
+          <span>I am a <span id="typewriter" class="typewriter-text"></span><span class="cursor-blink"></span></span>
+        </div>
+
+        <p class="hero-bio">
+          I design and build web products end to end: the interface, the API, and the data behind it.
+          Specialized in modern full-stack web architectures and dependable applied AI systems with enterprise
+          guardrails.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-glass">Hire Me</a>
+          <a href="#resume" class="btn btn-glass">See Resume</a>
+        </div>
+
+        <!-- Social Pills -->
+        <div class="hero-socials">
+          <span>Connect with me</span>
+          <div class="social-pills">
+            <a href="https://github.com/ranatbayee-collab" target="_blank" rel="noopener noreferrer" class="social-pill"
+              title="GitHub" aria-label="GitHub">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ranatkumarbayee" target="_blank" rel="noopener noreferrer"
+              class="social-pill" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+            <a href="https://x.com/ranatkumarbayee" target="_blank" rel="noopener noreferrer" class="social-pill"
+              title="X (Twitter)" aria-label="X (Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+              <span class="sr-only">X (Twitter)</span>
+            </a>
+            <a href="mailto:ranatbayee@gmail.com" class="social-pill" title="Email" aria-label="Email">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span class="sr-only">Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Hero Column (3D Interactive Tilt Glass Card & Avatar) -->
+      <div class="hero-interactive-column" data-reveal="fade-left">
+        <div class="hero-3d-card" id="hero-tilt-card">
+          <div class="orbital-ring"></div>
+          <div class="photo-frame">
+            <img src="assets/hero.png" alt="Sourava Kumar Swain" class="hero-photo-img">
+          </div>
+
+          <!-- Floating Luminous Glass Badges -->
+          <span class="float-chip chip-1">⚡ Full-Stack Developer</span>
+          <span class="float-chip chip-2">🤖 AI Engineer</span>
+          <span class="float-chip chip-3">📍 Bhubaneswar, India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INFINITE TECH MARQUEE
+       ======================================================================== -->
+  <div class="marquee-container" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><i>⚛️</i> React.js</div>
+      <div class="marquee-item"><i>▲</i> Next.js</div>
+      <div class="marquee-item"><i>🐍</i> Python</div>
+      <div class="marquee-item"><i>⚡</i> FastAPI</div>
+      <div class="marquee-item"><i>🟢</i> Node.js</div>
+      <div class="marquee-item"><i>🔷</i> TypeScript</div>
+      <div class="marquee-item"><i>🔥</i> PyTorch</div>
+      <div class="marquee-item"><i>🐘</i> PostgreSQL</div>
+      <div class="marquee-item"><i>⚡</i> Supabase</div>
+      <div class="marquee-item"><i>🐳</i> Docker</div>
+      <div class="marquee-item"><i>🧊</i> Three.js WebGL</div>
+      <div class="marquee-item"><i>🌐</i> REST APIs</div>
+      <div class="marquee-item"><i>🧠</i> Applied RAG</div>
+
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="marquee-item"><i>⚛️</i> React.js</div>
+      <div class="marquee-item"><i>▲</i> Next.js</div>
+      <div class="marquee-item"><i>🐍</i> Python</div>
+      <div class="marquee-item"><i>⚡</i> FastAPI</div>
+      <div class="marquee-item"><i>🟢</i> Node.js</div>
+      <div class="marquee-item"><i>🔷</i> TypeScript</div>
+      <div class="marquee-item"><i>🔥</i> PyTorch</div>
+      <div class="marquee-item"><i>🐘</i> PostgreSQL</div>
+      <div class="marquee-item"><i>⚡</i> Supabase</div>
+      <div class="marquee-item"><i>🐳</i> Docker</div>
+      <div class="marquee-item"><i>🧊</i> Three.js WebGL</div>
+      <div class="marquee-item"><i>🌐</i> REST APIs</div>
+      <div class="marquee-item"><i>🧠</i> Applied RAG</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ABOUT SECTION
+       ======================================================================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Architecting Digital Experiences</h2>
+        <p class="section-subtitle">A blend of full-stack engineering and intelligent machine learning.</p>
+      </header>
+
+      <div class="about-grid">
+        <!-- Main Bio Glass Card -->
+        <article class="glass-card about-main-card" data-reveal="fade-right">
+          <div class="about-text-content">
+            <p>
+              I design and build web products end to end: the user interface, the high-throughput API, and the robust
+              data infrastructure behind it.
+              My passion lies in bridging elegant, performant UI with scalable backends and modern applied artificial
+              intelligence.
+            </p>
+            <p>
+              Lately, most of my work focuses on integrating generative AI and retrieval-augmented generation (RAG)
+              pipelines into real-world products, complete with deterministic tool execution, automated evaluation, and
+              safety guardrails that make them dependable.
+            </p>
+          </div>
+
+          <dl class="about-facts-grid">
+            <div class="fact-item">
+              <dt>Based in</dt>
+              <dd>Bhubaneswar, India</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Primary Focus</dt>
+              <dd>Web Apps &amp; Applied AI</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Languages</dt>
+              <dd>English, Hindi, Odia</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Open to</dt>
+              <dd>Full-Time, Freelance, Collaboration</dd>
+            </div>
+          </dl>
+        </article>
+
+        <!-- Stats Grid Column with Animated Counters -->
+        <div class="about-stats-column">
+          <div class="glass-card stat-card" data-reveal="zoom-in" data-delay="1">
+            <span class="stat-number" data-target="15" data-suffix="+">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+
+          <div class="glass-card stat-card" data-reveal="zoom-in" data-delay="2">
+            <span class="stat-number" data-target="100" data-suffix="%">0</span>
+            <span class="stat-label">Code Reliability</span>
+          </div>
+
+          <div class="glass-card stat-card" data-reveal="zoom-in" data-delay="3">
+            <span class="stat-number" data-target="12" data-suffix="+">0</span>
+            <span class="stat-label">Core Technologies</span>
+          </div>
+
+          <div class="glass-card stat-card" data-reveal="zoom-in" data-delay="4">
+            <span class="stat-number" data-target="24" data-suffix="/7">0</span>
+            <span class="stat-label">Learning &amp; Innovation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SKILLS SECTION
+       ======================================================================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">My Skills &amp; Proficiencies</h2>
+        <p class="section-subtitle">The tools, frameworks, and languages I use to build robust software systems.</p>
+      </header>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" data-reveal="fade-up">
+        <button class="filter-tab active" type="button" data-skill-filter="all">All Skills</button>
+        <button class="filter-tab" type="button" data-skill-filter="Frontend">Frontend</button>
+        <button class="filter-tab" type="button" data-skill-filter="Backend">Backend</button>
+        <button class="filter-tab" type="button" data-skill-filter="AI and ML">AI &amp; ML</button>
+        <button class="filter-tab" type="button" data-skill-filter="Tools">DevOps &amp; Tools</button>
+      </div>
+
+      <!-- Skills Interactive Grid -->
+      <div class="skills-grid" id="skills-grid">
+        <!-- Frontend -->
+        <div class="glass-card skill-card" data-category="Frontend" data-reveal="fade-up">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🌐</span>
+              <h3 class="skill-title">HTML5 &amp; CSS3</h3>
+            </div>
+            <span class="skill-score">100%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="100%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Frontend" data-reveal="fade-up" data-delay="1">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">⚡</span>
+              <h3 class="skill-title">JavaScript (ES6+)</h3>
+            </div>
+            <span class="skill-score">100%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="100%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Frontend" data-reveal="fade-up" data-delay="2">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🔷</span>
+              <h3 class="skill-title">TypeScript</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Frontend" data-reveal="fade-up" data-delay="3">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">⚛️</span>
+              <h3 class="skill-title">React.js</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Frontend" data-reveal="fade-up">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">▲</span>
+              <h3 class="skill-title">Next.js</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="glass-card skill-card" data-category="Backend" data-reveal="fade-up">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🐍</span>
+              <h3 class="skill-title">Python</h3>
+            </div>
+            <span class="skill-score">100%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="100%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Backend" data-reveal="fade-up" data-delay="1">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🚀</span>
+              <h3 class="skill-title">FastAPI</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Backend" data-reveal="fade-up" data-delay="2">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🟢</span>
+              <h3 class="skill-title">Node.js</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Backend" data-reveal="fade-up" data-delay="3">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🐘</span>
+              <h3 class="skill-title">PostgreSQL &amp; SQL</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Backend" data-reveal="fade-up">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🔗</span>
+              <h3 class="skill-title">REST APIs &amp; GraphQL</h3>
+            </div>
+            <span class="skill-score">100%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="100%"></div>
+          </div>
+        </div>
+
+        <!-- AI and ML -->
+        <div class="glass-card skill-card" data-category="AI and ML" data-reveal="fade-up">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🧠</span>
+              <h3 class="skill-title">Prompting &amp; Evaluation</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="AI and ML" data-reveal="fade-up" data-delay="1">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🔍</span>
+              <h3 class="skill-title">RAG Pipelines</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="AI and ML" data-reveal="fade-up" data-delay="2">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">📊</span>
+              <h3 class="skill-title">scikit-learn</h3>
+            </div>
+            <span class="skill-score">75%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="75%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="AI and ML" data-reveal="fade-up" data-delay="3">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🔥</span>
+              <h3 class="skill-title">PyTorch</h3>
+            </div>
+            <span class="skill-score">75%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="75%"></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="glass-card skill-card" data-category="Tools" data-reveal="fade-up">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🐙</span>
+              <h3 class="skill-title">Git &amp; GitHub</h3>
+            </div>
+            <span class="skill-score">100%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="100%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Tools" data-reveal="fade-up" data-delay="1">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🐳</span>
+              <h3 class="skill-title">Docker</h3>
+            </div>
+            <span class="skill-score">75%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="75%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Tools" data-reveal="fade-up" data-delay="2">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">🐧</span>
+              <h3 class="skill-title">Linux</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-card" data-category="Tools" data-reveal="fade-up" data-delay="3">
+          <div class="skill-header">
+            <div class="skill-name-wrap">
+              <span class="skill-icon">☁️</span>
+              <h3 class="skill-title">Vercel &amp; Render Cloud</h3>
+            </div>
+            <span class="skill-score">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROJECTS SECTION
+       ======================================================================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">Featured Works</span>
+        <h2 class="section-title">Showcase of Creations</h2>
+        <p class="section-subtitle">Real-world full-stack architectures, interactive tools, and intelligent AI models.
+        </p>
+      </header>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" data-reveal="fade-up">
+        <button class="filter-tab active" type="button" data-proj-filter="all">All Projects</button>
+        <button class="filter-tab" type="button" data-proj-filter="AI">AI &amp; ML</button>
+        <button class="filter-tab" type="button" data-proj-filter="Web">Web Applications</button>
+        <button class="filter-tab" type="button" data-proj-filter="App">Utilities &amp; Apps</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- 1. FEATURED PROJECT: CAMPUSLINK 3.0 -->
+        <article class="glass-card project-card featured" data-category="AI" data-reveal="fade-up">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-cat-tag">AI Engineering</span>
+              <span class="star-project-tag">★ Star Project</span>
+            </div>
+            <h3 class="project-title">CAMPUSLINK 3.0</h3>
+            <p class="project-desc">
+              An AI-powered campus assistant that empowers students to discover events, clubs, official notices,
+              resources, and career opportunities across their college.
+              Built with verified, real-time campus data pipelines using deterministic AI tool calls instead of
+              hallucinations, with robust caching for offline and low-bandwidth scenarios.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">AI Tool Calling</span>
+              <span class="project-tag">RAG Pipeline</span>
+              <span class="project-tag">Next.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://campuslink-3-0.vercel.app" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Live Demo</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/sourava-coder/CAMPUSLINK-3.0" target="_blank" rel="noopener noreferrer"
+                class="btn btn-glass btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-visual">
+            <div class="visual-badge">🎓</div>
+            <div class="visual-status">⚡ Verified Campus AI Assistant</div>
+          </div>
+        </article>
+
+        <!-- 2. Portfolio Website -->
+        <article class="glass-card project-card" data-category="Web" data-reveal="fade-up" data-delay="1">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-cat-tag">Web &amp; 3D</span>
+            </div>
+            <h3 class="project-title">3D Glassmorphic Portfolio</h3>
+            <p class="project-desc">
+              Sourava Kumar Swain's cutting-edge portfolio showcasing full-stack engineering and AI capabilities.
+              Features a real-time Three.js 3D WebGL hero section, glassmorphic UI design, fluid custom cursor, and
+              dynamic scroll animations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Three.js</span>
+              <span class="project-tag">Glassmorphism</span>
+              <span class="project-tag">WebGL</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://sourava-portfolio-new.vercel.app" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">Live Demo</a>
+            <a href="https://github.com/sourava-coder/SOURAVA-PORTFOLIO-NEW" target="_blank" rel="noopener noreferrer"
+              class="btn btn-glass btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <!-- 3. Gully Cricket -->
+        <article class="glass-card project-card" data-category="Web" data-reveal="fade-up" data-delay="2">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-cat-tag">Web Application</span>
+            </div>
+            <h3 class="project-title">Gully Cricket Music Player</h3>
+            <p class="project-desc">
+              A retro, synthwave-flavoured audio player themed around old-school desi street cricket. Features
+              synchronized audio visualizers, playlist queues, and responsive retro neon styling.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Web Audio API</span>
+              <span class="project-tag">Synthwave UI</span>
+              <span class="project-tag">Render</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://gully-cricket-play.vercel.app" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">
+              <span>Live Demo</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+            <a href="https://github.com/sourava-coder/GULLY-CRICKET" target="_blank" rel="noopener noreferrer"
+              class="btn btn-glass btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. Scientific Calculator -->
+        <article class="glass-card project-card" data-category="App" data-reveal="fade-up" data-delay="1">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-cat-tag">Utility App</span>
+            </div>
+            <h3 class="project-title">Scientific Calculator</h3>
+            <p class="project-desc">
+              A responsive, feature-rich scientific calculator handling advanced trigonometric functions, logarithmic
+              operations, exponential math, and historical formula calculation state.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML5 Canvas</span>
+              <span class="project-tag">CSS3</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://scientific-calculator-new2.vercel.app" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">Live Demo</a>
+            <a href="https://github.com/sourava-coder/Scientific-calculator" target="_blank" rel="noopener noreferrer"
+              class="btn btn-glass btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <!-- 5. Durga Mata Sketch -->
+        <article class="glass-card project-card" data-category="App" data-reveal="fade-up" data-delay="2">
+          <div>
+            <div class="project-badge-row">
+              <span class="project-cat-tag">Creative Python</span>
+            </div>
+            <h3 class="project-title">Durga Mata Computational Sketch</h3>
+            <p class="project-desc">
+              An algorithmic graphic render developed with Python and graphic vector mathematics, drawing a detailed
+              portrait sketch for Durga Puja with clean geometric lines.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Vector Drawing</span>
+              <span class="project-tag">Algorithms</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sourava-coder/DURGA-MATA-SCETCH" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">View Project</a>
+            <a href="https://github.com/sourava-coder/DURGA-MATA-SCETCH" target="_blank" rel="noopener noreferrer"
+              class="btn btn-glass btn-sm">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       JOURNEY & EXPERIENCE SECTION
+       ======================================================================== -->
+  <section id="journey" class="section">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">My Professional Journey</h2>
+        <p class="section-subtitle">Key roles, competitions, and developmental milestones.</p>
+      </header>
+
+      <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+
+        <!-- 1. Software Developer -->
+        <div class="timeline-item" data-reveal="fade-up">
+          <div class="timeline-node"></div>
+          <article class="glass-card timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2029 to Present</span>
+              <span class="timeline-org">Ayush Technology</span>
+            </div>
+            <h3 class="timeline-title">Software Developer</h3>
+            <p class="timeline-desc">
+              Working as a software developer, contributing to the development of full-scale web applications and AI
+              solutions, focusing on delivering high-quality code, reliable APIs, and innovative user-centric features.
+            </p>
+          </article>
+        </div>
+
+        <!-- 2. BPUT Hackathon Winner -->
+        <div class="timeline-item" data-reveal="fade-up" data-delay="1">
+          <div class="timeline-node"></div>
+          <article class="glass-card timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2028</span>
+              <span class="timeline-org">BPUT University</span>
+            </div>
+            <h3 class="timeline-title">BPUT Hackathon Winner (1st Place)</h3>
+            <p class="timeline-desc">
+              Won first place in the BPUT Hackathon, leading a team of talented engineers to architect and deploy an
+              innovative solution that solved pressing real-world campus and societal challenges.
+            </p>
+          </article>
+        </div>
+
+        <!-- 3. Python Programming Mastery -->
+        <div class="timeline-item" data-reveal="fade-up" data-delay="2">
+          <div class="timeline-node"></div>
+          <article class="glass-card timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2027</span>
+              <span class="timeline-org">Ayush Technology</span>
+            </div>
+            <h3 class="timeline-title">Python Programming &amp; Frameworks</h3>
+            <p class="timeline-desc">
+              Mastered foundational and advanced concepts of Python, including asynchronous programming, backend
+              frameworks (FastAPI), data structures, and production application development.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EDUCATION & CERTIFICATIONS SECTION
+       ======================================================================== -->
+  <section id="education" class="section">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">Education &amp; Credentials</h2>
+        <p class="section-subtitle">Academic foundations and verified professional certifications.</p>
+      </header>
+
+      <div class="edu-cert-grid">
+        <!-- Education Column -->
+        <div data-reveal="fade-right">
+          <h3 class="column-title">
+            <i>🎓</i> Degrees &amp; Education
+          </h3>
+          <div class="edu-cards-list">
+            <article class="glass-card edu-card">
+              <div class="edu-time">2026 — 2030</div>
+              <h4 class="edu-degree">B.Tech in Computer Science &amp; Engineering</h4>
+              <p class="edu-school">Bhubaneswar Engineering College</p>
+              <p class="edu-focus">Focus on Software Engineering, Data Structures, Algorithms &amp; Machine Learning.
+              </p>
+            </article>
+
+            <article class="glass-card edu-card">
+              <div class="edu-time">2024 — 2026</div>
+              <h4 class="edu-degree">Higher Secondary Education (CHSE)</h4>
+              <p class="edu-school">UNOPOS Higher Secondary School of Science</p>
+              <p class="edu-focus">Specialization in Science with Physics, Chemistry, and Mathematics.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Certifications Column -->
+        <div data-reveal="fade-left">
+          <h3 class="column-title">
+            <i>📜</i> Honors &amp; Certifications
+          </h3>
+          <div class="edu-cards-list">
+            <article class="glass-card edu-card">
+              <div class="edu-time">2026</div>
+              <h4 class="edu-degree">QuizOff 2026 India's Biggest AI Quiz</h4>
+              <p class="edu-school">Team Unstop</p>
+              <p class="edu-focus">National-level artificial intelligence and computer science knowledge competition.
+              </p>
+            </article>
+
+            <article class="glass-card edu-card">
+              <div class="edu-time">2027</div>
+              <h4 class="edu-degree">Full-Stack Web Development &amp; Microservices</h4>
+              <p class="edu-school">Industry Certification</p>
+              <p class="edu-focus">Covering React, Node.js, modern REST architectures, and cloud deployments.</p>
+            </article>
+
+            <article class="glass-card edu-card">
+              <div class="edu-time">2030</div>
+              <h4 class="edu-degree">Applied Machine Learning &amp; GenAI Engineering</h4>
+              <p class="edu-school">Advanced Certification</p>
+              <p class="edu-focus">Neural network architectures, PyTorch, RAG system deployment, and evaluation.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       RESUME PREVIEW SECTION
+       ======================================================================== -->
+  <section id="resume" class="section">
+    <div class="container resume-container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">Summary</span>
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <p class="section-subtitle">A concise executive summary of my expertise, credentials, and capabilities.</p>
+      </header>
+
+      <div class="resume-toolbar" data-reveal="fade-up">
+        <button class="btn btn-primary" id="print-resume-btn" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print or Save as PDF</span>
+        </button>
+        <a href="mailto:souravkumarswain3333@gmail.com?subject=Resume%20Inquiry%20for%20Sourava"
+          class="btn btn-glass">Request CV via Email</a>
+      </div>
+
+      <!-- Glassmorphic Resume Sheet -->
+      <article class="resume-paper" id="resume-sheet" data-reveal="zoom-in">
+        <header class="paper-header">
+          <h3 class="paper-name">Sourava Kumar Swain</h3>
+          <p class="paper-role">Full-Stack Developer &amp; AI Engineer</p>
+          <div class="paper-contacts">
+            <span>📍 Bhubaneswar, India</span>
+            <span>✉️ souravkumarswain3333@gmail.com</span>
+            <span>📱 +91 9692618822</span>
+            <span>🔗 github.com/sourava-coder</span>
+          </div>
+        </header>
+
+        <h4 class="paper-section-title">Professional Summary</h4>
+        <p class="paper-text">
+          Full-stack developer and AI engineer who ships dependable products, from interface to database to model.
+          Experienced in architecting modern web apps with React, Next.js, FastAPI, Node.js, and integrating generative
+          AI with deterministic tooling.
+        </p>
+
+        <h4 class="paper-section-title">Technical Competencies</h4>
+        <p class="paper-text">
+          <strong>Frontend:</strong> React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS,
+          Three.js.<br>
+          <strong>Backend &amp; Databases:</strong> Python, FastAPI, Node.js, PostgreSQL, Supabase, RESTful APIs.<br>
+          <strong>AI &amp; Machine Learning:</strong> RAG Pipelines, Prompt Engineering, PyTorch, scikit-learn, Model
+          Evaluation.<br>
+          <strong>DevOps &amp; Tools:</strong> Git/GitHub, Docker, Linux, Vercel, Render.
+        </p>
+
+        <h4 class="paper-section-title">Experience &amp; Milestones</h4>
+        <p class="paper-text">
+          • <strong>Software Developer</strong> | Ayush Technology (2029 — Present)<br>
+          • <strong>1st Place Winner</strong> | BPUT Hackathon (2028)<br>
+          • <strong>Python Development Mastery</strong> | Ayush Technology (2027)
+        </p>
+
+        <h4 class="paper-section-title">Education</h4>
+        <p class="paper-text">
+          • <strong>B.Tech in Computer Science &amp; Engineering</strong> — Bhubaneswar Engineering College (2026 —
+          2030)<br>
+          • <strong>Higher Secondary Science</strong> — UNOPOS Higher Secondary School (2024 — 2026)
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT SECTION
+       ======================================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <header class="section-header" data-reveal="fade-up">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Let's Discuss Your Next Vision</h2>
+        <p class="section-subtitle">Reach out about engineering collaborations, full-time positions, or freelance
+          development.</p>
+      </header>
+
+      <div class="contact-grid">
+        <!-- Contact Form Card -->
+        <article class="glass-card contact-form-card" data-reveal="fade-right">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="john@example.com" required>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-msg" class="form-label">Your Message</label>
+              <textarea id="contact-msg" class="form-textarea"
+                placeholder="Tell me about your project, goals, or timeline..." required></textarea>
+              <div class="form-error"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+
+            <div id="form-status" class="form-status" role="status"></div>
+          </form>
+        </article>
+
+        <!-- Direct Contact Cards & Live Clock -->
+        <div class="contact-info-column" data-reveal="fade-left">
+          <a href="mailto:souravkumarswain3333@gmail.com" class="glass-card info-card">
+            <div class="info-icon-box">✉️</div>
+            <dl class="info-details">
+              <dt>Direct Email</dt>
+              <dd>souravkumarswain3333@gmail.com</dd>
+            </dl>
+          </a>
+
+          <a href="https://wa.me/919692618822" target="_blank" rel="noopener noreferrer" class="glass-card info-card">
+            <div class="info-icon-box">💬</div>
+            <dl class="info-details">
+              <dt>WhatsApp &amp; Phone</dt>
+              <dd>+91 9692618822</dd>
+            </dl>
+          </a>
+
+          <div class="glass-card info-card">
+            <div class="info-icon-box">📍</div>
+            <dl class="info-details">
+              <dt>Location</dt>
+              <dd>Bhubaneswar, Odisha, India</dd>
+            </dl>
+          </div>
+
+          <!-- Live Bhubaneswar Clock Card -->
+          <div class="glass-card clock-card">
+            <p class="clock-label">Local Time in Bhubaneswar (Asia/Kolkata)</p>
+            <div class="live-time" id="live-clock">--:--:-- --</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER & BACK TO TOP
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-in">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Sourava Kumar Swain Logo" class="footer-logo">
+        <span class="footer-brand-name">Sourava Kumar Swain</span>
+      </div>
+
+      <p class="footer-copy">
+        &copy; <span id="current-year">2026</span> Sourava Kumar Swain. Crafted with 3D WebGL &amp; Glassmorphism.
+      </p>
+
+      <div class="footer-socials">
+        <a href="https://github.com/sourava-coder" target="_blank" rel="noopener noreferrer"
+          class="social-pill footer-social-pill" title="GitHub" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/souravakumarswain" target="_blank" rel="noopener noreferrer"
+          class="social-pill footer-social-pill" title="LinkedIn" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" type="button" aria-label="Back to Top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Three.js (r128) CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Interactive Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
