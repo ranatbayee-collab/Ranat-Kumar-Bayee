@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ranat-kumar-bayee.vercel.app/sitemap.xml
+Sitemap: https://ranat.runs-on.dev/sitemap.xml
