@@ -427,7 +427,7 @@
         formStatus.style.display = 'block';
       }
 
-      const mailtoLink = `mailto:souravkumarswain3333@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:ranatbayee@gmail.com?subject=${encodeURIComponent(
         'Portfolio Contact from ' + nameInput.value.trim()
       )}&body=${encodeURIComponent(msgInput.value.trim() + '\n\nSender Email: ' + emailInput.value.trim())}`;
 
