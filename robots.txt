@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ranat-kumar-bayee.vercel.app/sitemap.xml
