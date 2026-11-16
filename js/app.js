@@ -96,32 +96,24 @@
     if (!mobileToggle || !navMenu) return;
     if (isOpen) {
       navMenu.classList.add('open');
+      mobileToggle.classList.add('open');
       mobileToggle.setAttribute('aria-expanded', 'true');
-      mobileToggle.innerHTML = `
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>`;
     } else {
       navMenu.classList.remove('open');
+      mobileToggle.classList.remove('open');
       mobileToggle.setAttribute('aria-expanded', 'false');
-      mobileToggle.innerHTML = `
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>`;
     }
   }
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = navMenu.classList.contains('open');
       setMobileMenuState(!isOpen);
     });
 
     // Close menu when clicking any nav link
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
+    navMenu.querySelectorAll('.nav-link, .mobile-nav-cta a').forEach(link => {
       link.addEventListener('click', () => {
         setMobileMenuState(false);
       });
@@ -129,7 +121,7 @@
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-      if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+      if (navMenu.classList.contains('open') && !e.target.closest('#nav-menu') && !e.target.closest('#mobile-toggle')) {
         setMobileMenuState(false);
       }
     });
@@ -372,9 +364,10 @@
   updateLiveClock();
   setInterval(updateLiveClock, 1000);
 
-  // --- Contact Form Submission & Validation ---
+  // --- Contact Form Submission & Abisheak Signature Send Animation ---
   const contactForm = document.getElementById('contact-form');
-  const formStatus = document.getElementById('form-status');
+  const contactSuccess = document.getElementById('contact-success');
+  const sendMsgBtn = document.getElementById('send-msg-btn');
 
   if (contactForm) {
     const nameInput = document.getElementById('contact-name');
@@ -420,22 +413,59 @@
 
       if (!isValid) return;
 
-      // Submit feedback simulation & mailto trigger
-      if (formStatus) {
-        formStatus.textContent = 'Thank you! Opening your email client to deliver your message...';
-        formStatus.className = 'form-status success';
-        formStatus.style.display = 'block';
+      // Trigger Send Plane Flight Animation
+      if (sendMsgBtn) {
+        sendMsgBtn.classList.add('sending');
+        sendMsgBtn.disabled = true;
       }
 
       const mailtoLink = `mailto:ranatbayee@gmail.com?subject=${encodeURIComponent(
         'Portfolio Contact from ' + nameInput.value.trim()
       )}&body=${encodeURIComponent(msgInput.value.trim() + '\n\nSender Email: ' + emailInput.value.trim())}`;
 
+      // Smooth Morph to "Message Sent!" state (Exact Abisheak Experience)
       setTimeout(() => {
-        window.location.href = mailtoLink;
-      }, 700);
+        contactForm.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        contactForm.style.opacity = '0';
+        contactForm.style.transform = 'scale(0.96)';
 
-      contactForm.reset();
+        setTimeout(() => {
+          contactForm.classList.add('hidden');
+          if (contactSuccess) {
+            contactSuccess.classList.remove('hidden');
+            contactSuccess.style.display = 'flex';
+          }
+
+          // Trigger mailto delivery safely without page navigation
+          setTimeout(() => {
+            const mailAnchor = document.createElement('a');
+            mailAnchor.href = mailtoLink;
+            mailAnchor.style.display = 'none';
+            document.body.appendChild(mailAnchor);
+            mailAnchor.click();
+            setTimeout(() => mailAnchor.remove(), 200);
+          }, 600);
+
+          // Reset back after 4 seconds (matching Abisheak portfolio)
+          setTimeout(() => {
+            if (contactSuccess) {
+              contactSuccess.style.display = 'none';
+              contactSuccess.classList.add('hidden');
+            }
+            contactForm.reset();
+            contactForm.classList.remove('hidden');
+            contactForm.style.display = 'flex';
+            requestAnimationFrame(() => {
+              contactForm.style.opacity = '1';
+              contactForm.style.transform = 'scale(1)';
+            });
+            if (sendMsgBtn) {
+              sendMsgBtn.classList.remove('sending');
+              sendMsgBtn.disabled = false;
+            }
+          }, 4000);
+        }, 300);
+      }, 500);
     });
   }
 
@@ -445,7 +475,7 @@
       errorBox.textContent = message;
       errorBox.style.display = 'block';
     }
-    input.style.borderColor = '#f87171';
+    input.style.borderColor = '#ff4d60';
   }
 
   function clearError(input) {
@@ -465,55 +495,25 @@
     });
   }
 
-  // --- Theme Toggle Logic ---
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('sourava_portfolio_theme') || 'dark';
+  // --- Card Spotlight Follower (Abisheak Signature Interactive Hover) ---
+  const spotlightCards = document.querySelectorAll(
+    '.glass-card, .project-card, .skill-card, .timeline-card, .stat-card, .info-card, .edu-card, .about-main-card'
+  );
 
-  if (savedTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    updateThemeIcon(true);
-  }
+  spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mx', `${x.toFixed(1)}px`);
+      card.style.setProperty('--my', `${y.toFixed(1)}px`);
+    }, { passive: true });
+  });
 
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const isCurrentlyLight = document.documentElement.getAttribute('data-theme') === 'light';
-      if (isCurrentlyLight) {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('sourava_portfolio_theme', 'dark');
-        updateThemeIcon(false);
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('sourava_portfolio_theme', 'light');
-        updateThemeIcon(true);
-      }
-    });
-  }
-
-  function updateThemeIcon(isLight) {
-    if (!themeToggleBtn) return;
-    if (isLight) {
-      themeToggleBtn.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      `;
-      themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Theme');
-    } else {
-      themeToggleBtn.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-      `;
-      themeToggleBtn.setAttribute('aria-label', 'Switch to Light Theme');
-    }
-  }
+  // Ensure Permanent Dark Cyberpunk Theme
+  try {
+    localStorage.removeItem('sourava_portfolio_theme');
+    document.documentElement.removeAttribute('data-theme');
+  } catch (_) {}
 })();
 

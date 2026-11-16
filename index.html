@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Ranat Kumar Bayee | Full-Stack Developer &amp; AI Engineer</title>
-  <meta name="google-site-verification" content="r4SRtIrURxme6TLBY900kEtu3wgKcWuQ-5CSOrJ-5d4" />
+  <meta name="google-site-verification" content="r4SRtIrURxme6TLBY900kEtu3wgKcWuQ-5CSOrJ-5d4">
 
   <meta name="description"
     content="Portfolio of Ranat Kumar Bayee, a Full-Stack Developer and AI Engineer from Bhubaneswar, India. Featuring 3D interactive hero, glassmorphism design, projects, skills and resume.">
@@ -15,16 +15,21 @@
   <link rel="icon" href="assets/logo.png" type="image/png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Ranat Kumar Bayee | 3D Full-Stack Developer & AI Engineer">
+  <meta property="og:title" content="Ranat Kumar Bayee | 3D Full-Stack Developer &amp; AI Engineer">
   <meta property="og:description"
     content="Explore my 3D glassmorphic portfolio, innovative AI projects, and development journey.">
   <meta property="og:type" content="website">
 
-  <!-- Fonts -->
+  <meta name="theme-color" content="#07070a">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Fonts (Abisheak Signature Typography) -->
+  <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&amp;display=swap">
   <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
     rel="stylesheet">
 
   <!-- Main Stylesheet -->
@@ -33,73 +38,47 @@
 
 <body>
   <!-- ========================================================================
-       3D IMMERSIVE PRELOADER
+       CYBER GLITCH PRELOADER (Abisheak Signature High-Tech Reveal)
        ======================================================================== -->
-  <div id="app-preloader" class="app-preloader" role="status" aria-live="polite"
-    aria-label="Loading portfolio experience">
-    <div class="preloader-backdrop" aria-hidden="true">
-      <div class="preloader-glow-orb"></div>
-      <div class="preloader-grid"></div>
+  <div id="glitch-loader" class="glitch-loader" role="status" aria-label="Loading Experience">
+    <div class="glitch-loader__veil"></div>
+    <div class="glitch-loader__count" aria-hidden="true">
+      <div class="glitch-loader__digit">
+        <div id="loader-tens" class="glitch-loader__digit-strip">
+          <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+        </div>
+      </div>
+      <div class="glitch-loader__digit">
+        <div id="loader-ones" class="glitch-loader__digit-strip">
+          <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+        </div>
+      </div>
+      <span id="loader-final" class="glitch-loader__final hidden">100</span>
     </div>
-
-    <div class="preloader-content">
-      <!-- 3D Gyroscope & Holographic Core Scene -->
-      <div class="loader-3d-scene" aria-hidden="true">
-        <div class="loader-3d-pivot" id="loader-pivot">
-          <!-- 3D Gyroscope Rings -->
-          <div class="gyro-ring ring-outer">
-            <span class="gyro-node node-1"></span>
-            <span class="gyro-node node-2"></span>
-          </div>
-          <div class="gyro-ring ring-middle">
-            <span class="gyro-node node-3"></span>
-            <span class="gyro-node node-4"></span>
-          </div>
-          <div class="gyro-ring ring-inner">
-            <span class="gyro-node node-5"></span>
-          </div>
-
-          <!-- 3D Holographic Polyhedral Glass Cube -->
-          <div class="loader-core-cube">
-            <div class="cube-face face-front"></div>
-            <div class="cube-face face-back"></div>
-            <div class="cube-face face-left"></div>
-            <div class="cube-face face-right"></div>
-            <div class="cube-face face-top"></div>
-            <div class="cube-face face-bottom"></div>
-          </div>
-
-          <!-- Quantum Energy Singularity -->
-          <div class="core-quantum-spark"></div>
-        </div>
-      </div>
-
-      <!-- Preloader Brand & Progress Indicator -->
-      <div class="preloader-brand">
-        <div class="preloader-monogram">RB</div>
-        <div class="preloader-name">Ranat Kumar Bayee</div>
-        <div class="preloader-role">Full-Stack Developer &amp; AI Engineer</div>
-      </div>
-
-      <!-- Progress Bar & Status -->
-      <div class="preloader-progress-wrap">
-        <div class="preloader-bar">
-          <div class="preloader-bar-fill" id="preloader-fill"></div>
-        </div>
-        <div class="preloader-meta">
-          <span class="preloader-status" id="preloader-status">Initializing 3D runtime...</span>
-          <span class="preloader-percent" id="preloader-percent">0%</span>
-        </div>
-      </div>
+    <div class="glitch-loader__center">
+      <p id="loader-statement" class="glitch-loader__statement" aria-hidden="true">
+        <span class="glitch-loader__word">RANAT</span>
+        <span class="glitch-loader__word">KUMAR</span>
+        <span class="glitch-loader__word">BAYEE</span>
+        <span class="glitch-loader__word">•</span>
+        <span class="glitch-loader__word">FULL-STACK</span>
+        <span class="glitch-loader__word">&amp;</span>
+        <span class="glitch-loader__word">AI</span>
+        <span class="glitch-loader__word">ENGINEER</span>
+      </p>
+      <p class="glitch-loader__frag glitch-loader__frag--0" aria-hidden="true">RANAT KUMAR BAYEE</p>
+      <p class="glitch-loader__frag glitch-loader__frag--1" aria-hidden="true">RANAT KUMAR BAYEE</p>
+      <p class="glitch-loader__frag glitch-loader__frag--2" aria-hidden="true">RANAT KUMAR BAYEE</p>
+      <p class="glitch-loader__frag glitch-loader__frag--3" aria-hidden="true">RANAT KUMAR BAYEE</p>
+      <p class="glitch-loader__frag glitch-loader__frag--4" aria-hidden="true">RANAT KUMAR BAYEE</p>
     </div>
   </div>
   <script src="js/loader.js"></script>
 
-  <!-- Ambient Luminous Mesh Glows -->
-  <div class="ambient-glow" aria-hidden="true">
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
-    <div class="glow-orb orb-3"></div>
+  <!-- Ambient Luminous Mesh Orbs -->
+  <div class="ambient" aria-hidden="true">
+    <i class="o1"></i>
+    <i class="o3"></i>
   </div>
 
   <!-- Cyber Matrix Overlay Grid -->
@@ -108,16 +87,20 @@
   <!-- Scroll Progress Indicator -->
   <div id="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Custom Magnetic Cursor Elements -->
-  <div id="cursor-dot" aria-hidden="true"></div>
-  <div id="cursor-circle" aria-hidden="true"></div>
+  <!-- Interactive Spark Cursor Canvas & Lightning Engine -->
+  <canvas id="spark-cursor" class="spark-cursor" aria-hidden="true"></canvas>
+
+  <!-- WebGL Three.js 3D Cosmic Starfield & Shard Canvas Mount (Persistent Across Entire Page) -->
+  <div id="hero-3d-mount" class="hero-3d-mount" aria-hidden="true">
+    <canvas id="hero-3d-canvas"></canvas>
+  </div>
 
   <!-- Floating Glass Navigation Bar -->
   <header class="nav-header">
     <nav class="container nav-container" aria-label="Main Navigation">
       <a href="#home" class="nav-brand">
         <img src="assets/logo.png" alt="Ranat Kumar Bayee" class="brand-avatar">
-        <span>Ranat Kumar Bayee</span>
+        <span><span class="brand-accent">R</span>anat Kumar Bayee</span>
       </a>
 
       <ul class="nav-menu" id="nav-menu">
@@ -129,135 +112,114 @@
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="mobile-nav-cta"><a href="#contact" class="btn btn-primary btn-sm glass-red">Hire Me</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Switch Theme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
+        <a href="#contact" class="btn btn-primary btn-sm glass-red nav-cta-desktop" data-cursor="venom">Hire Me</a>
 
-        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
-
-        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle Navigation Menu">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle Navigation Menu"
+          aria-expanded="false">
+          <span class="hamburger-bar bar-1"></span>
+          <span class="hamburger-bar bar-2"></span>
+          <span class="hamburger-bar bar-3"></span>
         </button>
       </div>
     </nav>
   </header>
 
   <!-- ========================================================================
-       HERO SECTION WITH 3D WEBGL INTERACTION & GLASSMORPHISM
+       HERO SECTION WITH 3D SHATTERED GLASS MIRROR & COSMIC WARP CANVAS
        ======================================================================== -->
-  <section id="home" class="hero-section">
-    <!-- WebGL Three.js 3D Background Canvas -->
-    <canvas id="hero-3d-canvas"></canvas>
+  <div id="hero" class="w-full flex flex-col">
+    <section id="home" class="hero-section relative w-full">
+      <!-- 3D Perspective Hero Content (Parallax Tilt with Shards) -->
+      <div id="hero-copy-wrap"
+        class="hero-copy-wrap absolute flex items-center will-change-transform pointer-events-none">
+        <div class="hero-copy-inner pointer-events-auto">
+          <div data-hero-copy class="hero-copy-box flex flex-col gap-3">
+            <span class="hero-eyebrow">VISUAL CRAFTSMAN • DIGITAL ARCHITECT</span>
+            <h1 class="hero-name">Ranat Kumar Bayee</h1>
+            <div class="hero-subroles">
+              <span>FULL-STACK DEVELOPER</span>
+              <span class="role-slash">/</span>
+              <span>AI ENGINEER</span>
+            </div>
 
-    <div class="container hero-grid">
-      <!-- Left Hero Column (Glass Content) -->
-      <div class="hero-content" data-reveal="fade-right">
-        <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-name">Ranat Kumar Bayee</h1>
+            <!-- Glass Terminal Prompt with Dynamic Typewriter -->
+            <div class="hero-terminal">
+              <span class="terminal-prompt">&gt;</span>
+              <span>I am a <span id="typewriter" class="typewriter-text"></span><span
+                  class="cursor-blink"></span></span>
+            </div>
 
-        <!-- Glass Terminal Prompt with Dynamic Typewriter -->
-        <div class="hero-terminal">
-          <span class="terminal-prompt">&gt;</span>
-          <span>I am a <span id="typewriter" class="typewriter-text"></span><span class="cursor-blink"></span></span>
-        </div>
+            <p class="hero-bio">
+              I design and build web products end to end: the interface, the API, and the data behind it.
+              Specialized in modern full-stack web architectures and dependable applied AI systems with enterprise
+              guardrails.
+            </p>
 
-        <p class="hero-bio">
-          I design and build web products end to end: the interface, the API, and the data behind it.
-          Specialized in modern full-stack web architectures and dependable applied AI systems with enterprise
-          guardrails.
-        </p>
+            <!-- CTA Action Buttons -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary glass-red" data-cursor="venom">
+                <span>Explore My Work</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-glass" data-cursor="venom">Hire Me</a>
+              <a href="#resume" class="btn btn-glass">See Resume</a>
+            </div>
 
-        <!-- CTA Action Buttons -->
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <span>View Projects</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="#contact" class="btn btn-glass">Hire Me</a>
-          <a href="#resume" class="btn btn-glass">See Resume</a>
-        </div>
-
-        <!-- Social Pills -->
-        <div class="hero-socials">
-          <span>Connect with me</span>
-          <div class="social-pills">
-            <a href="https://github.com/ranatbayee-collab" target="_blank" rel="noopener noreferrer" class="social-pill"
-              title="GitHub" aria-label="GitHub">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              <span class="sr-only">GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/ranatkumarbayee" target="_blank" rel="noopener noreferrer"
-              class="social-pill" title="LinkedIn" aria-label="LinkedIn">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-              <span class="sr-only">LinkedIn</span>
-            </a>
-            <a href="https://x.com/ranatkumarbayee" target="_blank" rel="noopener noreferrer" class="social-pill"
-              title="X (Twitter)" aria-label="X (Twitter)">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-              </svg>
-              <span class="sr-only">X (Twitter)</span>
-            </a>
-            <a href="mailto:ranatbayee@gmail.com" class="social-pill" title="Email" aria-label="Email">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <span class="sr-only">Email</span>
-            </a>
+            <!-- Social Pills -->
+            <div class="hero-socials">
+              <span>Connect with me</span>
+              <div class="social-pills">
+                <a href="https://github.com/ranatbayee-collab" target="_blank" rel="noopener noreferrer"
+                  class="social-pill" title="GitHub" aria-label="GitHub">
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span class="sr-only">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ranatkumarbayee" target="_blank" rel="noopener noreferrer"
+                  class="social-pill" title="LinkedIn" aria-label="LinkedIn">
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://x.com/ranatkumarbayee" target="_blank" rel="noopener noreferrer" class="social-pill"
+                  title="X (Twitter)" aria-label="X (Twitter)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                  </svg>
+                  <span class="sr-only">X (Twitter)</span>
+                </a>
+                <a href="mailto:ranatbayee@gmail.com" class="social-pill" title="Email" aria-label="Email">
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span class="sr-only">Email</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Right Hero Column (3D Interactive Tilt Glass Card & Avatar) -->
-      <div class="hero-interactive-column" data-reveal="fade-left">
-        <div class="hero-3d-card" id="hero-tilt-card">
-          <div class="orbital-ring"></div>
-          <div class="photo-frame">
-            <img src="assets/hero1.png" alt="Ranat Kumar Bayee" class="hero-photo-img">
-          </div>
-
-          <!-- Floating Luminous Glass Badges -->
-          <span class="float-chip chip-1">⚡ Full-Stack Developer</span>
-          <span class="float-chip chip-2">🤖 AI Engineer</span>
-          <span class="float-chip chip-3">📍 Bhubaneswar, India</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- ========================================================================
        INFINITE TECH MARQUEE
@@ -677,7 +639,7 @@
             </div>
             <div class="project-links">
               <a href="https://campuslink-3-0.vercel.app" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary btn-sm">
+                class="btn btn-primary btn-sm glass-red" data-cursor="venom">
                 <span>Live Demo</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -724,7 +686,7 @@
           </div>
           <div class="project-links">
             <a href="https://sourava-portfolio-new.vercel.app" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Live Demo</a>
+              class="btn btn-primary btn-sm glass-red" data-cursor="venom">Live Demo</a>
             <a href="https://github.com/sourava-coder/SOURAVA-PORTFOLIO-NEW" target="_blank" rel="noopener noreferrer"
               class="btn btn-glass btn-sm">GitHub</a>
           </div>
@@ -750,7 +712,7 @@
           </div>
           <div class="project-links">
             <a href="https://gully-cricket-play.vercel.app" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">
+              class="btn btn-primary btn-sm glass-red" data-cursor="venom">
               <span>Live Demo</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -789,7 +751,7 @@
           </div>
           <div class="project-links">
             <a href="https://scientific-calculator-new2.vercel.app" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Live Demo</a>
+              class="btn btn-primary btn-sm glass-red" data-cursor="venom">Live Demo</a>
             <a href="https://github.com/sourava-coder/Scientific-calculator" target="_blank" rel="noopener noreferrer"
               class="btn btn-glass btn-sm">GitHub</a>
           </div>
@@ -814,7 +776,7 @@
           </div>
           <div class="project-links">
             <a href="https://github.com/sourava-coder/DURGA-MATA-SCETCH" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">View Project</a>
+              class="btn btn-primary btn-sm glass-red" data-cursor="venom">View Project</a>
             <a href="https://github.com/sourava-coder/DURGA-MATA-SCETCH" target="_blank" rel="noopener noreferrer"
               class="btn btn-glass btn-sm">GitHub</a>
           </div>
@@ -968,7 +930,7 @@
       </header>
 
       <div class="resume-toolbar" data-reveal="fade-up">
-        <button class="btn btn-primary" id="print-resume-btn" type="button">
+        <button class="btn btn-primary glass-red" id="print-resume-btn" type="button" data-cursor="venom">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
@@ -1030,53 +992,98 @@
   <!-- ========================================================================
        CONTACT SECTION
        ======================================================================== -->
-  <section id="contact" class="section">
-    <div class="container">
+  <section id="contact" class="section relative">
+    <div class="container relative">
       <header class="section-header" data-reveal="fade-up">
-        <span class="section-tag">Let's Connect</span>
-        <h2 class="section-title">Let's Discuss Your Next Vision</h2>
+        <span class="section-tag flex items-center gap-1.5"><i class="tag-icon">🕷️</i> Get In Touch</span>
+        <h2 class="section-title">Contact.</h2>
         <p class="section-subtitle">Reach out about engineering collaborations, full-time positions, or freelance
           development.</p>
       </header>
 
-      <div class="contact-grid">
-        <!-- Contact Form Card -->
-        <article class="glass-card contact-form-card" data-reveal="fade-right">
-          <form id="contact-form" novalidate>
-            <div class="form-group">
-              <label for="contact-name" class="form-label">Your Name</label>
-              <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+      <!-- WhatsApp Quick Chat Card (Abisheak Signature Pill) -->
+      <a href="https://wa.me/919380656081?text=Hi%20Ranat%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+        target="_blank" rel="noopener noreferrer" aria-label="Chat with Ranat on WhatsApp"
+        class="whatsapp-card glass glass-hover" data-cursor="venom" data-reveal="fade-up">
+        <span class="whatsapp-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+            </path>
+          </svg>
+        </span>
+        <span class="flex min-w-0 flex-col">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">WhatsApp Direct</span>
+          <span class="text-base sm:text-lg md:text-xl font-extrabold text-gray-100">+91 9380656081</span>
+        </span>
+        <span class="whatsapp-cta hidden sm:block">Chat now →</span>
+      </a>
+
+      <!-- Ambient Red Glow Halo -->
+      <div class="red-halo contact-red-halo" aria-hidden="true"></div>
+
+      <div class="contact-grid relative z-10">
+        <!-- Interactive Form Card with Send Animation -->
+        <article class="glass glass-panel-card contact-form-card relative z-10" data-reveal="fade-right">
+          <!-- Abisheak Signature "Message Sent!" Animation Screen -->
+          <div id="contact-success" class="py-12 flex flex-col items-center text-center send-success-view hidden">
+            <div
+              class="glass-red w-16 h-16 text-white rounded-full flex items-center justify-center text-3xl font-black mb-4 animate-bounce">
+              ✓
+            </div>
+            <h3 class="text-3xl font-black uppercase tracking-tight text-white mb-3">
+              Message Sent!
+            </h3>
+            <p class="text-lg text-gray-400 font-medium max-w-md">
+              Thanks for reaching out to Ranat. I'll get back to you shortly.
+            </p>
+          </div>
+
+          <!-- Active Interactive Form -->
+          <form id="contact-form" class="flex flex-col gap-6" novalidate>
+            <div class="form-grid-two">
+              <div class="form-group flex flex-col gap-2.5">
+                <label for="contact-name"
+                  class="form-label text-sm font-bold uppercase tracking-wider text-gray-400">Your Name</label>
+                <input required type="text" id="contact-name" placeholder="Your Name"
+                  class="glass-input text-gray-100 placeholder:text-gray-500 focus:outline-none transition-all">
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group flex flex-col gap-2.5">
+                <label for="contact-email"
+                  class="form-label text-sm font-bold uppercase tracking-wider text-gray-400">Your Email</label>
+                <input required type="email" id="contact-email" placeholder="your.email@example.com"
+                  class="glass-input text-gray-100 placeholder:text-gray-500 focus:outline-none transition-all">
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-group flex flex-col gap-2.5">
+              <label for="contact-msg"
+                class="form-label text-sm font-bold uppercase tracking-wider text-gray-400">Message &amp; Project
+                Scope</label>
+              <textarea required id="contact-msg" rows="5" placeholder="Let's build something cinematic together..."
+                class="glass-input text-gray-100 placeholder:text-gray-500 focus:outline-none transition-all resize-none"></textarea>
               <div class="form-error"></div>
             </div>
 
-            <div class="form-group">
-              <label for="contact-email" class="form-label">Your Email</label>
-              <input type="email" id="contact-email" class="form-input" placeholder="john@example.com" required>
-              <div class="form-error"></div>
+            <div class="flex justify-center mt-2">
+              <button type="submit" id="send-msg-btn" class="btn btn-primary glass-red send-btn" data-cursor="venom">
+                <span class="send-btn-label">Send Message</span>
+                <svg class="send-plane-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
             </div>
-
-            <div class="form-group">
-              <label for="contact-msg" class="form-label">Your Message</label>
-              <textarea id="contact-msg" class="form-textarea"
-                placeholder="Tell me about your project, goals, or timeline..." required></textarea>
-              <div class="form-error"></div>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">
-              <span>Send Message</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
-            </button>
-
-            <div id="form-status" class="form-status" role="status"></div>
           </form>
         </article>
 
         <!-- Direct Contact Cards & Live Clock -->
         <div class="contact-info-column" data-reveal="fade-left">
-          <a href="mailto:ranatbayeee@gmail.com" class="glass-card info-card">
+          <a href="mailto:ranatbayee@gmail.com" class="glass-card info-card">
             <div class="info-icon-box">✉️</div>
             <dl class="info-details">
               <dt>Direct Email</dt>
